@@ -29,7 +29,7 @@ stages:
     type: apt
     source:
       packages:
-      - nvidia-kernel-dkms
+#      - nvidia-kernel-dkms
       - linux-image-surface
       - linux-headers-surface
       - libwacom-surface
