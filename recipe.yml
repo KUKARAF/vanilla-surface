@@ -17,12 +17,13 @@ stages:
     type: shell
     commands:
     - wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc | gpg --dearmor > /usr/share/keyrings/linux-surface.gpg
-   # - echo "deb [arch=amd64] https://pkg.surfacelinux.com/debian release main" > 
     - echo "Types: deb" > /etc/apt/sources.list.d/linux-surface.sources
     - echo "URIs: https://pkg.surfacelinux.com/debian" >> /etc/apt/sources.list.d/linux-surface.sources
     - echo "Architectures: amd64" >> /etc/apt/sources.list.d/linux-surface.sources
     - echo "Components: main release" >> /etc/apt/sources.list.d/linux-surface.sources
     - echo "Signed-By: /usr/share/keyrings/vanilla_keyring.gpg" >> /usr/share/keyrings/linux-surface.gpg
+    # - echo "deb [arch=amd64] https://pkg.surfacelinux.com/debian release main" > 
+
       
   - name: init-setup
     type: shell
@@ -35,9 +36,9 @@ stages:
     source:
       packages:
 #      - nvidia-kernel-dkms
-#      - linux-image-surface
-#      - linux-headers-surface
-#      - libwacom-surface
+      - linux-image-surface
+      - linux-headers-surface
+      - libwacom-surface
       - iptsd
 #      - firmware-misc-nonfree
 #      - nvidia-driver
