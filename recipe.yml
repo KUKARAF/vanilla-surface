@@ -29,15 +29,16 @@ stages:
     type: apt
     source:
       packages:
-      - nvidia-driver
-      - nvidia-vaapi-driver
-      - nvidia-settings
-      - nvidia-smi
+      - nvidia-kernel-dkms
       - linux-image-surface
       - linux-headers-surface
       - libwacom-surface
       - iptsd
       - firmware-misc-nonfree
+      - nvidia-driver
+      - nvidia-vaapi-driver
+      - nvidia-settings
+      - nvidia-smi
 
   - name: nvidia-sysd-units
     type: shell
