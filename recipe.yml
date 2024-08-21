@@ -35,10 +35,10 @@ stages:
       - libwacom-surface
       - iptsd
       - firmware-misc-nonfree
-      - nvidia-driver
-      - nvidia-vaapi-driver
-      - nvidia-settings
-      - nvidia-smi
+#      - nvidia-driver
+#      - nvidia-vaapi-driver
+#      - nvidia-settings
+#      - nvidia-smi
 
   - name: nvidia-sysd-units
     type: shell
